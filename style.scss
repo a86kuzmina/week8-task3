@@ -1,0 +1,172 @@
+body {
+    font-size: 13px;
+    width: 95vw;
+    min-height: 95vh;
+    display: grid;
+    grid-template-rows: 10% 1fr 10%;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin:3%;
+    padding: 1%;
+    .header__btn {
+        display: flex;
+        max-width: 170px;
+        width: 100%;
+        padding: 15%;
+    }
+}
+.btn {
+    text-decoration: none;
+    background-color: #5222D0;
+    border-radius: 100px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    padding: 4%;
+}   
+.container {
+    background-image: url(./assets/background.svg);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+}
+.container__main {
+    width: 35vw;
+    .container__title {
+        margin-top: 30px;
+    }
+    .container__text {
+        margin-top: 30px;
+    }
+    .container__buy {
+        margin: 5vh 0 0 0;
+    }
+    .container__btn {
+        max-width: 270px;
+        width: 100%;
+        font-size: 2em;
+        padding: 5%;
+    }
+}   
+.btn__icon {
+    max-width: 40px;
+}
+.title {
+    color: #000;
+    font-family: "Inter" sans-serif;
+    font-size: 6em;
+    font-style: bold;
+    font-weight: 800;
+    line-height: 120%;
+}
+.text {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 160%;
+}
+.menu {
+    margin-left: 10%;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 160%;
+    .menu__item {
+        text-decoration: none;
+        margin: 0 35px 0 0;
+    }
+}
+.menu__item-violet {
+    color: #5222D0;
+}
+/*Стили второй страницы, кторых нет на первой*/
+.main__title {
+    margin-left: 10%;
+}
+.cards {
+    max-width: 1280px;
+    width: 100%;
+    margin: 3% 10% 10% 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr 1fr;  
+    .cards__title {
+        font-size: 2em;
+        font-weight: bold;
+    }
+}
+.cards__item-big {
+    max-width: 440px;
+    max-height: 550px;
+    padding: 5%;
+    margin: 0 auto;
+}
+.cards__item-border {
+    border: 1px solid #BB2247;
+}
+.cards__item-small {
+    max-width: 436px;
+    max-height: 259px;
+    padding: 5%;
+    margin: 0 auto;
+}
+.cards__item-red {
+    background-color: #EC615B;  
+}
+.subscribe {
+    max-width: 325px;
+    max-height: 30px;
+    margin: 4% 0 5% 0;
+}
+.menu__item-black {
+    color: black;
+}
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 10px;
+    }
+    .header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+        margin: 0;
+    }
+    .container {
+        justify-content: start;
+    }
+    .container__img {
+        display: none;
+    }
+    .btn__icon {
+        max-width: 20px;
+    }
+    .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto;
+    }
+    .cards__item-border {
+        border: none;
+    }
+    .menu :not(:first-child) {
+        display: none;
+    }
+}
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 5px;
+    }
+    .btn__icon {
+        max-width: 10px;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        }
+}
